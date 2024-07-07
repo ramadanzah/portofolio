@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Portofolio Saya</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Ramadanzah" />
+
+		<!-- === icons === -->
+		<link rel="" href="">
+
+		<!-- === font === -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<!-- === bootstrap === -->
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+		<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+
+		<style>
+			body {
+				padding: 0;
+			}
+
+			p {
+				margin-bottom: 1.5rem;
+				text-align: justify;
+			}
+
+			.social-media img {
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			}
+
+				/* widget */
+				#contact-widget {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+		.contact-icon {
+			width: 50px;
+			height: 50px;
+			background-color: #25d365af;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+		}
+		.barcode-modal img {
+			width: 100%;
+		}
+
+		@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+			.barcode-modal .modal-dialog {
+			max-width: 50%;
+			margin: auto;
+			}
+		}
+		@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+			.barcode-modal .modal-dialog {
+			max-width: 40%;
+			margin: auto;
+			}
+		}
+		@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+			.barcode-modal .modal-dialog {
+			max-width: 30%;
+			margin: auto;
+			}
+		}
+		@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+			.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+			}
+		}
+		</style>
+
+	</head>
+	<body class="loading" style="background-color: black; font-family: 'Anton SC', sans-serif;">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+			<symbol id="icon-longarrow" viewBox="0 0 54 24">
+				<title>longarrow</title>
+				<path d="M.42 11.158L12.38.256c.333-.27.696-.322 1.09-.155.395.166.593.467.593.903v6.977h38.87c.29 0 .53.093.716.28.187.187.28.426.28.716v5.98c0 .29-.093.53-.28.716a.971.971 0 0 1-.716.28h-38.87v6.977c0 .416-.199.717-.592.903-.395.167-.759.104-1.09-.186L.42 12.62a1.018 1.018 0 0 1 0-1.462z" />
+			</symbol>
+			<symbol id="icon-navarrow" viewBox="0 0 408 408">
+				<title>navarrow</title>
+				<polygon fill="#fff" fill-rule="nonzero" points="204 0 168.3 35.7 311.1 178.5 0 178.5 0 229.5 311.1 229.5 168.3 372.3 204 408 408 204"></polygon>
+			</symbol>
+		</svg>
+
+				<!-- === navbar === -->
+				<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0, 0.500); border-bottom: 1px solid white; position: fixed; z-index: 9999; width: 100%; max-width: 1800px;">
+					<div class="container-fluid">
+					  <a class="navbar-brand" href="#" style="background-color: black; padding: 5px;">Contact</a>
+					  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+						<span class="navbar-toggler-icon"></span>
+					  </button>
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+						  <li class="nav-item">
+							<a class="nav-link active" style="margin-right: 30px;"  href="index.html">BERANDA</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link active" style="margin-right: 30px;" href="tentangsaya.html">TENTANG SAYA</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link active" style="margin-right: 30px;" href="latarbelakang.html">LATAR BELAKANG</a>
+						  </li>
+						  <li class="nav-item">
+							<a class="nav-link active" style="margin-right: 30px;" href="kontak.html">KONTAK</a>
+						  </li>
+						</ul>
+					  </div>
+					</div>
+				  </nav>
+
+		<main>
+
+			<div class="slideshow text-white" style="border-bottom: 1px solid white; background-image: url(img/sea.jpg);">
+				<div class="slideshow__deco"></div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/1.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Welcome</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">1</span>
+						<h3 class="slide__title">Hi! Saya Ramadanzah</h3>
+						<h4 class="slide__subtitle">Selamat datang di portofolio saya!  >></h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/2.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Tentang saya</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">2</span>
+						<h3 class="slide__title text-white">Tentang Saya</h3>
+						<h4 class="slide__subtitle">ketuk gambar untuk melihat selengkapnya >></h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/3.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Pendidikan</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">3</span>
+						<h3 class="slide__title">Pendidikan</h3>
+						<h4 class="slide__subtitle">ketuk gambar untuk melihat selengkapnya >></h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/4.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Pengalaman Kerja</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">Pengalaman Kerja</h3>
+						<h4 class="slide__subtitle">ketuk gambar untuk melihat selengkapnya >></h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/5.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Hobi</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">Hobi</h3>
+						<h4 class="slide__subtitle">hal yang paling menyenangkan ada dibagian ini >> </h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/6.jpg);"></div>
+					</div>
+					<div class="slide__side text-white">Harapan &amp; Mimpi</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">6</span>
+						<h3 class="slide__title">Harapan &amp; Mimpi</h3>
+						<h4 class="slide__subtitle">ketuk gambar untuk melihat selengkapnya >></h4>
+					</div>
+				</div>
+				<button class="nav nav--prev">
+					<svg class="icon icon--navarrow-prev">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+				<button class="nav nav--next">
+					<svg class="icon icon--navarrow-next">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+			</div>
+
+
+			<div class="content text-white">
+				<div class="content__item">
+					<span class="content__number">1</span>
+					<h3 class="content__title">Welcome!</h3>
+					<h4 class="content__subtitle">Terima kasi telah mengunjungi laman ini</h4>
+					<div class="content__text">semoga kunjungan anda kesini dapat bermanfaat bagi Anda dan menjadi amal kebaikan untuk diri saya pribadi.Amiin..</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">2</span>
+					<h3 class="content__title">Tentang saya</h3>
+					<h4 class="content__subtitle">This is probably the greatest thing to happen in my life</h4>
+					<div class="content__text">
+                        <p>Halo! Nama saya Ramadanzah. Saya adalah seorang Mahasiswa. Saya memiliki pengalaman dalam dunia programming dan sangat tertarik dengan prospek kerja di bidang IT . Saya suka menghabiskan waktu saya untuk melakukan kegiatan seperti grafik desain situs web,bermain game,programing dan membaca buku.</p>
+					<p>Saya percaya bahwa kerja keras dan konsistensi adalah kunci kesuksesan. Saya selalu berusaha untuk menjadi versi terbaik dari diri saya setiap hari dan mencapai tujuan saya melalui usaha dan dedikasi yang tiada henti. Terima kasih telah mengunjungi halaman saya. Saya harap kita bisa terhubung dan berbagi pengalaman.</p>
+                    </div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">3</span>
+					<h3 class="content__title">Record Pendidikan</h3>
+					<h4 class="content__subtitle"><a href="latarbelakang.html"> info selengkapnya klik disini >></a></h4>
+					<div class="content__text" style="column-count: 2;">
+                        <p>SDN6 BANDAR JAYA</p>
+                        <p>Tahun Pendidikan: 2008-2014</p>
+                        <p>SMPN2 DENTE TELADAS</p>
+                        <p>Tahun Pendidikan: 2016-2018</p>
+                        <p>SMKN1 DENTE TELADAS</p>
+                        <p>Tahun Pendidikan: 2018-2020</p>
+                        <p>IIB DARMAJAYA</p>
+                        <p>Tahun Pendidikan: 2022-Sekarang</p>
+                         </div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">4</span>
+					<h3 class="content__title">Pengalaman Bekerja</h3>
+					<h4 class="content__subtitle"><a href="latarbelakang.html"> info selengkapnya klik disini >></a></h4>
+                    <div class="content__text" style="column-count: 2;">
+                        <p>KARYAWAN UD ARJUNA</p>
+                        <p> 2008-2014</p>
+                        <p>KARYAWAN PT JUNIOR CRAB</p>
+                        <p>2016-2018</p>
+                        <p>KARYAWAN PT UD RAZZAQ JAYA</p>
+                        <p> 2018-2020</p>
+                        <p>IT RUMAH MAKAN SIANG MALAM</p>
+                        <p> 2021-2022</p>
+                    </div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">5</span>
+					<h3 class="content__title">Hobiku</h3>
+					<h4 class="content__subtitle"><a href="latarbelakang.html"> info selengkapnya klik disini >></a></h4>
+					<div class="content__text" style="column-count: 3; font-family: 'Anton SC', sans-serif;">
+                        <img src="img/laptop.png" alt="" style="width: 50px; height: 50px;">
+                        <h5 class="card-title">Programming Web</h5>
+                        <img src="img/desain.png" alt="" style="width: 50px; height: 50px;">
+                        <h5 class="card-title">Desain Grafis</h5>
+                        <img src="img/buku.png" alt="" style="width: 50px; height: 50px;">
+                        <h5 class="card-title">Membaca Buku</h5>
+
+                    </div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">6</span>
+					<h3 class="content__title">Harapan dan Mimpi</h3>
+					<h4 class="content__subtitle">"This is unplanned it really just happens"</h4>
+					<div class="content__text">
+                        <p>Saya bercita-cita menjadi seorang web developer yang handal dan berkontribusi dalam proyek-proyek besar. Saya ingin terus belajar dan berkembang dalam bidang teknologi untuk menciptakan solusi-solusi inovatif.</p>
+                    </div>
+				</div>
+				<button class="content__close">
+					<svg class="icon icon--longarrow">
+						<use xlink:href="#icon-longarrow"></use>
+					</svg>
+				</button>
+			</div>
+		</main>
+
+		<section style="background-image: url(img/paper.jpg); padding: 10px; padding-bottom: 5rem; border-bottom: 2px solid white;">
+			<!-- === judul === -->
+			<div class="container text-black mt-5">
+				<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">Kontak</h2>
+			</div>
+			<p class="container text-center text-black">ingin menjalin kemitraan atau hanya sekedar bertegur sapa? silahkan hubungi saya disini :</p>
+			<div class="container col-md-6 mt-5" style="padding: 20px; border-radius: 3px; background-color: white;">
+				<form class="text-black" action="https://formspree.io/f/mzzpbodn" method="post">
+				  <div class="mb-3">
+					<label for="nama" class="form-label text-black">Nama : </label>
+					<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama Anda" required style="background-color: rgba(0, 0, 0, 0.26); font-family: 'poppins', sans-serif;">
+				  </div>
+				  <div class="mb-3">
+					<label for="email" class="form-label text-black">Email :</label>
+					<input type="email" class="form-control" id="email" name="email" placeholder="Masukkan alamat email Anda" required style="background-color: rgba(0, 0, 0, 0.26); font-family: 'poppins', sans-serif;">
+				  </div>
+				  <div class="mb-3">
+					<label for="pesan" class="form-label text-black">Pesan :</label>
+					<textarea class="form-control" id="pesan" name="pesan" rows="3" placeholder="Tulis pesan Anda di sini" required style="background-color: rgba(0, 0, 0, 0.26); font-family: 'poppins', sans-serif;"></textarea>
+				  </div>
+				  <br>
+				  <div class="d-flex justify-content-center">
+					<button type="submit" class="btn text-black" style="font-size: 20px;">Kirim =></button>
+				  </div>
+				</form>
+			  </div>
+		</section>
+				
+		<!-- footer -->
+		<footer class="bg text-white mt-5" style="background-color: black;">
+			<div class="container py-4">
+			  <div class="row">
+				<div class="col-md-4">
+				  <h5>Alamat</h5>
+				  <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng,<br>
+					Kec.Rajabasa, Kota Bandar Lampung<br>
+					Lampung 35141, Indonesia<br>
+				  Telp: 0838-4847-6607<br>
+				  Email: ramadanzah205@gmail.com</p>
+				</div>
+				<div class="col-md-4">
+				  <h5>Navigasi</h5>
+				  <ul class="list-unstyled">
+					<li><a href="index.html" class="text-white">Beranda</a></li>
+					<li><a href="tentangsaya.html" class="text-white">Tentang Saya</a></li>
+					<li><a href="latarbelakang.html" class="text-white">Latar Belakang</a></li>
+					<li><a href="kontak.html" class="text-white">Kontak</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-4 text-md-end">
+				  <h5>Sosial Media</h5>
+				  <div class="social-media">
+					<a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+					<a href="https://wa.me/qr/NYTBADA2WEISF1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+					<a href="https://www.instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+					<a href="https://www.linkedin.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="pt-3">
+				<p class="text-center">&copy; 2024 Ramadanzah. All rights reserved.</p>
+			  </div>
+			</div>
+		  </footer>
+		
+
+
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+
+		<!-- java script -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+				<!-- === widget === -->
+				<div id="contact-widget">
+					<div class="contact-icon" data-toggle="modal" data-target="#whatsappModal">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" style="width: 30px; height: 30px;;">
+					</div>
+				</div>
+
+				  <!-- WhatsApp Modal -->
+				  <div class="modal fade barcode-modal" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header  bg-light">
+							<h5 class="modal-title" id="whatsappModalLabel">Scan QR Code WhatsApp</h5>
+							<button type="button" class="close bg-light" data-dismiss="modal" aria-label="Close" style="border: none;">
+							  <span aria-hidden="true" style="width: 30px; height: 30px;">X</span>
+							</button>
+						  </div>
+						<div class="modal-body">
+						  <img src="img/barcode.jpg" alt="WhatsApp QR Code">
+						</div>
+					  </div>
+					</div>
+				  </div>
+		
+				  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+				  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+				  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+				  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	</body>
+</html>
