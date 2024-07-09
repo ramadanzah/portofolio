@@ -3,9 +3,446 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Biodata Admin</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Anton SC', sans-serif;;
+
+        }
+
+        .social-media img {
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			}
+
+        			/* widget */
+			#contact-widget {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+		.contact-icon {
+			width: 50px;
+			height: 50px;
+			background-color: #25d365af;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+		}
+		.barcode-modal img {
+			width: 100%;
+		}
+
+		@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+			.barcode-modal .modal-dialog {
+			max-width: 50%;
+			margin: auto;
+			}
+		}
+		@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+			.barcode-modal .modal-dialog {
+			max-width: 40%;
+			margin: auto;
+			}
+		}
+		@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+			.barcode-modal .modal-dialog {
+			max-width: 30%;
+			margin: auto;
+			}
+		}
+		@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+			.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+			}
+		}
+    </style>
+
 </head>
 <body>
-    <h1>hello world</h1>
+
+    				<!-- === navbar === -->
+                    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0, 0.500); border-bottom: 1px solid white; position: fixed; z-index: 9999; width: 100%; max-width: 1800px;">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#" style="background-color: black; padding: 5px;">My-Portofolio</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" style="margin-right: 30px;"  href="login.html">
+                                    <img src="img/exit.png" alt="exit" style="width: 30px; height: 30px;"> LOG OUT
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+
+                      <div class="container" style="height: 100px;">
+
+                      </div>
+
+                      <!-- icon -->
+    <div class="container">
+        <div class="row" style="justify-content: center; ">
+            <img src="img/icon.png" alt="" style="width: 100px; height: 98px; border: 5px solid white; border-radius: 50%;">
+        </div>
+    </div>
+
+    	<!-- === judul === -->
+		<div class="container text-white mt-5">
+			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">BIODATA ADMIN</h2>
+		</div>
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="nama">Nama:</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" readonly value="Ramadanzah" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="umur">Umur:</label>
+                                        <input type="text" class="form-control" id="umur" name="umur" readonly value="22" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ttl">Tempat,Tanggal lahir:</label>
+                                        <input type="text" class="form-control" id="ttl" name="ttl" readonly value="Kuala Teladas,10 Nov 2001" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat">Alamat:</label>
+                                        <textarea class="form-control" id="alamat" name="alamat" readonly style="border-radius: 0; border: none; background-color: white;">Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec.Rajabasa, Kota Bandar Lampung Lampung 35141, Indonesia</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pekerjaan">Pekerjaan:</label>
+                                        <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" readonly value="Mahasiswa" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" name="email" readonly value="ramadanzah205@gmail.com" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="telepon">Telepon:</label>
+                                        <input type="text" class="form-control" id="telepon" name="telepon" readonly value="0838-4847-6607" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pendidikan">Pendidikan Terakhir:</label>
+                                        <input type="text" class="form-control" id="pendidikan" name="pendidikan" readonly value="SMK/SMA/SEDERAJAT" style="border-radius: 0; border: none; background-color: white;">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <img src="img/pass-foto.jpg" class="rounded" alt="Foto Profil">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                   		<!-- === judul === -->
+		<div class="container text-white" style="margin-top: 5rem;">
+			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">Keahlian</h2>
+		</div>
+
+		<!-- === programming language === -->
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/html.png" class="card-img-top" alt="Gambar 4">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center">HTML => 90%</h5>
+							<!-- <p class="card-text">Deskripsi singkat tentang konten 4.</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/css.png" class="card-img-top" alt="Gambar 4">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center">CSS => 90%</h5>
+							<!-- <p class="card-text">Deskripsi singkat tentang konten 4.</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3 mt-5" style="background-color: black;">
+						<img src="img/js.png" class="card-img-top" alt="Gambar 4" style="width: 70%; margin: auto;">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center">JS => 20%</h5>
+							<!-- <p class="card-text">Deskripsi singkat tentang konten 4.</p> -->
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/php.png" class="card-img-top" alt="Gambar 4" style="margin-top: 4rem;">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center" style="margin-top: 50px;">PHP => 40%</h5>
+							<!-- <p class="card-text">Deskripsi singkat tentang konten 4.</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+        <br>
+
+        		<!-- === judul === -->
+		<div class="container text-white mt-5">
+			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">Record Pendidikan</h2>
+		</div>
+
+        <!-- === pendidikan === -->
+		<div class="container my-5">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/sd.png" class="card-img-top" alt="Gambar 4" style="width: 70%; margin: auto;">
+						<div class="card-body mt-3">
+							<h5 class="card-title text-white text-center">SD N 6 BANDAR JAYA</h5>
+							<p class="card-text text-white text-center" style="font-family: 'poppins', sans-serif;">Tahun Pendidikan : <br>
+                                2008-2014
+                            </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/smp.jpg" class="card-img-top" alt="Gambar 4" style="width: 70%; margin: auto;">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center">SMP N 2 DENTE TELADAS</h5>
+							<p class="card-text text-white text-center" style="font-family: 'poppins', sans-serif;">Tahun Pendidikan : <br>
+                                2016-2018
+                            </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/sma.jpg" class="card-img-top" alt="Gambar 4" style="width: 70%; margin: auto;">
+						<div class="card-body">
+							<h5 class="card-title text-white text-center">SMK N 1 DENTE TELADAS</h5>
+							<p class="card-text text-white text-center" style="font-family: 'poppins', sans-serif;">Tahun Pendidikan : <br>
+                                2018-2020
+                            </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="card p-3" style="background-color: black;">
+						<img src="img/darmajaya.png" class="card-img-top" alt="Gambar 4" style="width: 70%; margin: auto;">
+						<div class="card-body" style="margin-top: 35px;">
+							<h5 class="card-title text-white text-center">IIB DARMAJAYA</h5>
+							<p class="card-text text-white text-center" style="font-family: 'poppins', sans-serif;">Tahun Pendidikan : <br>
+                                2022-Sekarang
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+        <!-- Section Pengalaman Bekerja -->
+<section id="pengalaman" class="py-5">
+    <div class="container text-white">
+        <h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">Pengalaman Bekerja</h2>
+      <div class="row mb-4">
+        <div class="col text-center">
+          <p class=" text-center">Berikut adalah beberapa pengalaman kerja saya sebelumnya.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-2" style="background-color: black;">
+            <div class="card-body">
+              <h5 class="card-title">>> Karyawan UD Arjuna Seafood</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2016 - 2017</h6>
+              <p class="card-text" style="font-family: 'poppins', sans-serif;"> Bagian pencatatan data timbangan hasil tangkapan nelayan serta melakukan pencatatan Pengeluaran dan Pemasukan nelayan</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-2" style="background-color: black;">
+            <div class="card-body">
+              <h5 class="card-title">>> Karyawan PT Junior crab</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2017-2018</h6>
+              <p class="card-text" style="font-family: 'poppins', sans-serif;"> Bagian pemasakan, pengemasan dan pengiriman daging rajungan matang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col text-center">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4" style="background-color: black;">
+            <div class="card-body">
+              <h5 class="card-title">>> Karyawan UD Razzaq Jaya</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2018-2020 </h6>
+              <p class="card-text" style="font-family: 'poppins', sans-serif;">Bagian pensortiran berbagai jenis hasil tangkapan laut</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4" style="background-color: black;">
+            <div class="card-body" >
+              <h5 class="card-title">>> IT Rumah Makan Siang Malam Cab.Lampung Tengah</h5>
+              <h6 class="card-subtitle mb-2 text-muted">2021-2022</h6>
+              <p class="card-text" style="font-family: 'poppins', sans-serif;">Pengelola sistem IT untuk operasional rumah makan, termasuk pemasangan jaringan, perawatan perangkat keras, dan pengembangan aplikasi pemesanan online. Bekerja untuk memastikan efisiensi teknologi dalam mendukung layanan pelanggan.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+    <!-- Section Hobi -->
+<section id="hobi" class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col text-center">
+          <h2>Hobiku</h2>
+          <p class="text-black text-center">Beberapa kegiatan yang saya nikmati di waktu luang.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 bg-light" style="border: none;">
+            <div class="card-body text-center">
+                <img src="img/laptop.png" alt="" style="width: 50px; height: 50px;">
+              <h5 class="card-title">Programming Web</h5>
+              <p class="card-text">Saya menikmati mengembangkan aplikasi web, mempelajari teknologi baru, dan membangun proyek-proyek pribadi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 bg-light" style="border: none;">
+            <div class="card-body text-center">
+                <img src="img/desain.png" alt="" style="width: 50px; height: 50px;">
+              <h5 class="card-title">Desain Grafis</h5>
+              <p class="card-text">Saya suka berkreasi dengan desain grafis, membuat poster, logo, dan berbagai elemen visual lainnya.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 bg-light" style="border: none;">
+            <div class="card-body text-center">
+                <img src="img/buku.png" alt="" style="width: 50px; height: 50px;">
+              <h5 class="card-title">Membaca</h5>
+              <p class="card-text">Saya senang membaca buku-buku tentang teknologi, fiksi ilmiah, dan pengembangan diri.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    	<!-- footer -->
+		<footer class="bg text-white mt-5" style="background-color: black; background: url(img/paper.jpg); text-shadow: 1px 1px 1px black;">
+			<div class="container py-4">
+			  <div class="row">
+				<div class="col-md-4">
+				  <h5>Alamat</h5>
+				  <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng,<br>
+					Kec.Rajabasa, Kota Bandar Lampung<br>
+					Lampung 35141, Indonesia<br>
+				  Telp: 0838-4847-6607<br>
+				  Email: ramadanzah205@gmail.com</p>
+				</div>
+				<div class="col-md-4">
+				  <h5>Navigasi</h5>
+				  <ul class="list-unstyled">
+					<li><a href="index.html" class="text-white">Beranda</a></li>
+					<li><a href="tentangsaya.html" class="text-white">Tentang Saya</a></li>
+					<li><a href="latarbelakang.html" class="text-white">Latar Belakang</a></li>
+					<li><a href="kontak.html" class="text-white">Kontak</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-4 text-md-end">
+				  <h5>Sosial Media</h5>
+				  <div class="social-media">
+					<a href="https://www.facebook.com/share/riKDDM4zQxM3p69v/?mibextid=qi2Omg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+					<a href="https://wa.me/qr/NYTBADA2WEISF1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+					<a href="https://www.instagram.com/ramadanzah8?igsh=MTBlZTFpdXFjMTdqOQ==" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+					<a href="https://www.linkedin.com/in/ramadanzah-undefined-1881ba293" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="pt-3">
+				<p class="text-center">&copy; 2024 Ramadanzah. All rights reserved.</p>
+			  </div>
+			</div>
+		  </footer>
+		
+
+
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+
+		<!-- java script -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+						<!-- === widget === -->
+				<div id="contact-widget">
+					<div class="contact-icon" data-toggle="modal" data-target="#whatsappModal">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" style="width: 30px; height: 30px;;">
+					</div>
+				</div>
+
+				  <!-- WhatsApp Modal -->
+				  <div class="modal fade barcode-modal" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true" >
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header  bg-light">
+						  <h5 class="modal-title" id="whatsappModalLabel">Scan QR Code WhatsApp</h5>
+						  <button type="button" class="close bg-light" data-dismiss="modal" aria-label="Close" style="border: none;">
+							<span aria-hidden="true" style="width: 30px; height: 30px;">X</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  <img src="img/barcode.jpg" alt="WhatsApp QR Code">
+						</div>
+					  </div>
+					</div>
+				  </div>
 </body>
 </html>

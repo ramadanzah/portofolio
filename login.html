@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Login dengan Bootstrap</title>
+    <title>Login</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
@@ -15,6 +15,7 @@
     <style>
         body {
             background-color: black;
+            font-family: 'Anton SC', sans-serif;;
 
         }
 
@@ -80,6 +81,36 @@
 </head>
 <body>
 
+       				<!-- === navbar === -->
+                       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(0, 0, 0, 0.500); border-bottom: 1px solid white; position: fixed; z-index: 9999; width: 100%; max-width: 1800px;">
+                        <div class="container-fluid">
+                          <a class="navbar-brand" href="#" style="background-color: black; padding: 5px;">My-Portofolio</a>
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
+                              <li class="nav-item">
+                                <a class="nav-link active" style="margin-right: 30px;"  href="index.html">BERANDA</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" style="margin-right: 30px;" href="tentangsaya.html">TENTANG SAYA</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" style="margin-right: 30px;" href="latarbelakang.html">LATAR BELAKANG</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link active" style="margin-right: 30px;" href="kontak.html">KONTAK</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+
+                      <div class="container" style="height: 100px;">
+
+                      </div>
+
     <div class="container mt-5">
         <div class="row" style="justify-content: center;">
             <img src="img/icon.png" alt="" style="width: 100px; height: 98px; border: 5px solid white; border-radius: 50%;">
@@ -88,7 +119,7 @@
 
     	<!-- === judul === -->
 		<div class="container text-white mt-5">
-			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">LOGIN BRO.</h2>
+			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">LOGIN ADMIN</h2>
 		</div>
 
     <div class="container mt-5" style="font-family: 'Anton SC', sans-serif;">
@@ -99,7 +130,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="username">Username:</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <input type="text" class="form-control" id="username" name="username" required style="font-family: sans-serif;">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password:</label>
@@ -135,13 +166,13 @@
                 }, 2000); // Arahkan ke halaman biodata.html setelah 2 detik
             } else {
                 // Jika login gagal
-                loginResult.innerHTML = '<div class="alert alert-danger" role="alert">Username atau password salah. Silakan coba lagi.</div>';
+                loginResult.innerHTML = '<div class="alert alert-danger" role="alert">Username dan Password Admin salah.Silahkan coba kembali</div>';
             }
         }
     </script>
 
     	<!-- footer -->
-		<footer class="bg text-white mt-5" style="background-color: black; background: url(img/paper.jpg);">
+		<footer class="bg text-white mt-5" style="background-color: black; background: url(img/paper.jpg); text-shadow: 1px 1px 1px black;">
 			<div class="container py-4">
 			  <div class="row">
 				<div class="col-md-4">
