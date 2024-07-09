@@ -152,24 +152,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script>
-        function checkLogin() {
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var loginResult = document.getElementById('loginResult');
-
-            if (username === 'Rama' && password === '000') {
-                // Jika login berhasil
-                loginResult.innerHTML = '<div class="alert alert-success" role="alert">Login berhasil! Memuat halaman...</div>';
-                setTimeout(function() {
-                    window.location.href = 'biodata.html';
-                }, 2000); // Arahkan ke halaman biodata.html setelah 2 detik
-            } else {
-                // Jika login gagal
-                loginResult.innerHTML = '<div class="alert alert-danger" role="alert">Username dan Password Admin salah.Silahkan coba kembali</div>';
-            }
-        }
-    </script>
+<script src="pass.js"></script>
 
     	<!-- footer -->
 		<footer class="bg text-white mt-5" style="background-color: black; background: url(img/paper.jpg); text-shadow: 1px 1px 1px black;">
