@@ -12,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
     <style>
         body {
             background-color: black;
@@ -51,6 +56,22 @@
 		.barcode-modal img {
 			width: 100%;
 		}
+
+		@media print {
+            body * {
+                visibility: hidden;
+            }
+            .printable-area, .printable-area * {
+                visibility: visible;
+            }
+            .printable-area {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
 
 		@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
 			.barcode-modal .modal-dialog {
@@ -95,6 +116,7 @@
                                     <img src="img/exit.png" alt="exit" style="width: 30px; height: 30px;"> LOG OUT
                                 </a>
                               </li>
+							  
                             </ul>
                           </div>
                         </div>
@@ -104,14 +126,15 @@
 
                       </div>
 
-                      <!-- icon -->
-    <div class="container">
-        <div class="row" style="justify-content: center; ">
-            <img src="img/icon.png" alt="" style="width: 100px; height: 98px; border: 5px solid white; border-radius: 50%;">
-        </div>
-    </div>
 
-    	<!-- === judul === -->
+		<div class="container printable-area">
+			 <!-- icon -->
+				<div class="container">
+					<div class="row" style="justify-content: center; ">
+						<img src="img/icon.png" alt="" style="width: 100px; height: 98px; border: 5px solid white; border-radius: 50%;">
+					</div>
+				</div>
+			<!-- === judul === -->
 		<div class="container text-white mt-5">
 			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">BIODATA ADMIN</h2>
 		</div>
@@ -125,35 +148,35 @@
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <label for="nama">Nama:</label>
-                                        <input type="text" class="form-control" id="nama" name="nama" readonly value="Ramadanzah" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="nama" name="nama" readonly value="Ramadanzah" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="umur">Umur:</label>
-                                        <input type="text" class="form-control" id="umur" name="umur" readonly value="22" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="umur" name="umur" readonly value="22" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="ttl">Tempat,Tanggal lahir:</label>
-                                        <input type="text" class="form-control" id="ttl" name="ttl" readonly value="Kuala Teladas,10 Nov 2001" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="ttl" name="ttl" readonly value="Kuala Teladas,10 Nov 2001" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="alamat">Alamat:</label>
-                                        <textarea class="form-control" id="alamat" name="alamat" readonly style="border-radius: 0; border: none; background-color: white;">Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec.Rajabasa, Kota Bandar Lampung Lampung 35141, Indonesia</textarea>
+                                        <textarea class="form-control" id="alamat" name="alamat" readonly style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">Jl. ZA. Pagar Alam No.93, Gedong Meneng, Kec.Rajabasa, Kota Bandar Lampung Lampung 35141, Indonesia</textarea>
                                     </div>
                                     <div class="form-group">
                                         <label for="pekerjaan">Pekerjaan:</label>
-                                        <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" readonly value="Mahasiswa" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" readonly value="Mahasiswa" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email:</label>
-                                        <input type="email" class="form-control" id="email" name="email" readonly value="ramadanzah205@gmail.com" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="email" class="form-control" id="email" name="email" readonly value="ramadanzah205@gmail.com" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="telepon">Telepon:</label>
-                                        <input type="text" class="form-control" id="telepon" name="telepon" readonly value="0838-4847-6607" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="telepon" name="telepon" readonly value="0838-4847-6607" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                     <div class="form-group">
                                         <label for="pendidikan">Pendidikan Terakhir:</label>
-                                        <input type="text" class="form-control" id="pendidikan" name="pendidikan" readonly value="SMK/SMA/SEDERAJAT" style="border-radius: 0; border: none; background-color: white;">
+                                        <input type="text" class="form-control" id="pendidikan" name="pendidikan" readonly value="SMK/SMA/SEDERAJAT" style="border-radius: 0; border: none; background-color: white; font-family: 'poppins', sans-serif; font-weight: 500;">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -167,6 +190,13 @@
                 </div>
             </div>
         </div>
+		</div>
+
+		<div class="container d-flex justify-content-center" style="margin-top: 3rem;">
+			<button type="button" class="btn btn-sm text-black text-center " onclick="window.print()" style="background-color: rgb(205, 205, 205); border-radius: 0;"><img src="img/print.png" alt="" style="height: 50px; width: 50px;"> CETAK BIODATA</button>
+		</div>
+    	
+
 
                    		<!-- === judul === -->
 		<div class="container text-white" style="margin-top: 5rem;">
