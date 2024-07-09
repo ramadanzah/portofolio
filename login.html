@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Login dengan Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: black;
+
+        }
+
+        .social-media img {
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			}
+
+        			/* widget */
+			#contact-widget {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1000;
+		}
+		.contact-icon {
+			width: 50px;
+			height: 50px;
+			background-color: #25d365af;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			cursor: pointer;
+			margin-bottom: 10px;
+		}
+		.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+		}
+		.barcode-modal img {
+			width: 100%;
+		}
+
+		@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+			.barcode-modal .modal-dialog {
+			max-width: 50%;
+			margin: auto;
+			}
+		}
+		@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ 
+			.barcode-modal .modal-dialog {
+			max-width: 40%;
+			margin: auto;
+			}
+		}
+		@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+			.barcode-modal .modal-dialog {
+			max-width: 30%;
+			margin: auto;
+			}
+		}
+		@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+			.barcode-modal .modal-dialog {
+			max-width: 20%;
+			margin: auto;
+			}
+		}
+    </style>
+
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row" style="justify-content: center;">
+            <img src="img/icon.png" alt="" style="width: 100px; height: 98px; border: 5px solid white; border-radius: 50%;">
+        </div>
+    </div>
+
+    	<!-- === judul === -->
+		<div class="container text-white mt-5">
+			<h2 class="container text-center" style="font-family: 'Anton SC', sans-serif;">LOGIN BRO.</h2>
+		</div>
+
+    <div class="container mt-5" style="font-family: 'Anton SC', sans-serif;">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card" style="border-radius: 0;">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn" onclick="checkLogin()" style="border-radius: 0; background-color: black; color: white;">Masuk</button>
+                            </div>
+                            <div id="loginResult" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var loginResult = document.getElementById('loginResult');
+
+            if (username === 'Rama' && password === '000') {
+                // Jika login berhasil
+                loginResult.innerHTML = '<div class="alert alert-success" role="alert">Login berhasil! Memuat halaman...</div>';
+                setTimeout(function() {
+                    window.location.href = 'biodata.html';
+                }, 2000); // Arahkan ke halaman biodata.html setelah 2 detik
+            } else {
+                // Jika login gagal
+                loginResult.innerHTML = '<div class="alert alert-danger" role="alert">Username atau password salah. Silakan coba lagi.</div>';
+            }
+        }
+    </script>
+
+    	<!-- footer -->
+		<footer class="bg text-white mt-5" style="background-color: black; background: url(img/paper.jpg);">
+			<div class="container py-4">
+			  <div class="row">
+				<div class="col-md-4">
+				  <h5>Alamat</h5>
+				  <p>Jl. ZA. Pagar Alam No.93, Gedong Meneng,<br>
+					Kec.Rajabasa, Kota Bandar Lampung<br>
+					Lampung 35141, Indonesia<br>
+				  Telp: 0838-4847-6607<br>
+				  Email: ramadanzah205@gmail.com</p>
+				</div>
+				<div class="col-md-4">
+				  <h5>Navigasi</h5>
+				  <ul class="list-unstyled">
+					<li><a href="index.html" class="text-white">Beranda</a></li>
+					<li><a href="tentangsaya.html" class="text-white">Tentang Saya</a></li>
+					<li><a href="latarbelakang.html" class="text-white">Latar Belakang</a></li>
+					<li><a href="kontak.html" class="text-white">Kontak</a></li>
+				  </ul>
+				</div>
+				<div class="col-md-4 text-md-end">
+				  <h5>Sosial Media</h5>
+				  <div class="social-media">
+					<a href="https://www.facebook.com/share/riKDDM4zQxM3p69v/?mibextid=qi2Omg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+					<a href="https://wa.me/qr/NYTBADA2WEISF1" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+					<a href="https://www.instagram.com/ramadanzah8?igsh=MTBlZTFpdXFjMTdqOQ==" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+					<a href="https://www.linkedin.com/in/ramadanzah-undefined-1881ba293" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+				  </div>
+				</div>
+			  </div>
+			  <div class="pt-3">
+				<p class="text-center">&copy; 2024 Ramadanzah. All rights reserved.</p>
+			  </div>
+			</div>
+		  </footer>
+		
+
+
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+
+		<!-- java script -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+						<!-- === widget === -->
+				<div id="contact-widget">
+					<div class="contact-icon" data-toggle="modal" data-target="#whatsappModal">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" style="width: 30px; height: 30px;;">
+					</div>
+				</div>
+
+				  <!-- WhatsApp Modal -->
+				  <div class="modal fade barcode-modal" id="whatsappModal" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true" >
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					  <div class="modal-content">
+						<div class="modal-header  bg-light">
+						  <h5 class="modal-title" id="whatsappModalLabel">Scan QR Code WhatsApp</h5>
+						  <button type="button" class="close bg-light" data-dismiss="modal" aria-label="Close" style="border: none;">
+							<span aria-hidden="true" style="width: 30px; height: 30px;">X</span>
+						  </button>
+						</div>
+						<div class="modal-body">
+						  <img src="img/barcode.jpg" alt="WhatsApp QR Code">
+						</div>
+					  </div>
+					</div>
+				  </div>
+</body>
+</html>
